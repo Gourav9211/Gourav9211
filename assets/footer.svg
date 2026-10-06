@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" role="img" aria-label="wave">
+  <defs>
+    <linearGradient id="w1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="w3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ec4899" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="url(#w3)">
+    <path d="M -200 106 q 50 -20 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 V 150 H -200 Z">
+      <animateTransform attributeName="transform" type="translate" values="-200 0; 0 0" dur="14s" calcMode="linear" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="url(#w2)">
+    <path d="M -200 86 q 50 -24 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 V 150 H -200 Z">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -200 0" dur="7s" calcMode="linear" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="url(#w1)">
+    <path d="M -200 64 q 50 -26 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 t 100 0 V 150 H -200 Z">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -200 0" dur="9s" calcMode="linear" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="#a78bfa">
+    <circle cx="180" cy="34" r="3">
+      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="22" r="2.5" fill="#67e8f9">
+      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="38" r="3" fill="#f0abfc">
+      <animate attributeName="opacity" values="0;1;0" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

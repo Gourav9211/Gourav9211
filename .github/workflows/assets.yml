@@ -1,0 +1,50 @@
+name: ✨ Profile assets
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "37 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare output dir
+        run: mkdir -p dist
+
+      - name: Falling contribution graph
+        uses: flycran/github-gravity@v1
+        with:
+          username: ${{ github.repository_owner }}
+          text: "</>"
+          text-color: "#8b5cf6"
+          output-path: dist/gravity.svg
+
+      - name: Snake animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#8b5cf6&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+
+      - name: Publish to gh-pages
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+          commit_message: "chore: refresh profile assets"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
